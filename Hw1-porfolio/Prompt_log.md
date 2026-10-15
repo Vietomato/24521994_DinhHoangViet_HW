@@ -33,7 +33,6 @@ Yêu cầu:
 
 Prompt 3:
 Hãy thực hiện riêng M3 của HW1.
-
 Yêu cầu:
 - Tìm và loại bỏ toàn bộ inline event handlers như onclick, onchange.
 - Gắn sự kiện trong js/main.js bằng addEventListener.
@@ -43,3 +42,13 @@ Yêu cầu:
 - Sau khi sửa, liệt kê cách kiểm tra rằng không còn inline handlers
 và không có lỗi CSP trong Console.
 Chỉ sửa các file cần thiết cho M3.
+
+Prompt 4:
+Tôi đã chạy Lighthouse cho HW1 và kết quả là:
+[Dán điểm và các lỗi Lighthouse liệt kê]
+
+Hãy chỉ đề xuất các sửa đổi cần thiết để cải thiện kết quả.
+Giữ website bằng HTML, CSS và JavaScript thuần.
+Không thêm thư viện hoặc tài nguyên bên ngoài.
+Không tuyên bố đạt 100 nếu chưa có kết quả chạy kiểm tra xác nhận.
+Cho tôi biết cần sửa file nào và cách chạy Lighthouse lại.
