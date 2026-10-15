@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101318">
+  <title>Drum Kit Engine</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="page-header">
+      <p class="eyebrow">HTML · CSS · JAVASCRIPT THUẦN</p>
+      <h1>Drum Kit <span>Engine</span></h1>
+      <p class="intro">Chọn một pad để chơi trống. Phím gõ tương ứng được hiển thị trên từng pad.</p>
+    </header>
+
+    <section class="kit-panel" aria-labelledby="kit-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PLAY</p>
+          <h2 id="kit-title">Bộ trống</h2>
+        </div>
+        <p class="key-hint"><kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <span>để chơi</span></p>
+      </div>
+
+      <div class="drum-grid" aria-label="Các nút trống">
+        <button class="drum-pad drum-pad--kick" type="button" data-key="a" data-sound="kick" aria-label="Kick, phím A">
+          <span class="pad-key" aria-hidden="true">A</span>
+          <span class="pad-name">Kick</span>
+          <span class="pad-detail">Trống bass</span>
+        </button>
+        <button class="drum-pad drum-pad--snare" type="button" data-key="s" data-sound="snare" aria-label="Snare, phím S">
+          <span class="pad-key" aria-hidden="true">S</span>
+          <span class="pad-name">Snare</span>
+          <span class="pad-detail">Trống snare</span>
+        </button>
+        <button class="drum-pad drum-pad--hihat" type="button" data-key="d" data-sound="hihat" aria-label="Hi-hat, phím D">
+          <span class="pad-key" aria-hidden="true">D</span>
+          <span class="pad-name">Hi-hat</span>
+          <span class="pad-detail">Chũm chọe</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="recorder-panel" aria-labelledby="recorder-title">
+      <div class="section-heading recorder-heading">
+        <div>
+          <p class="eyebrow">SESSION</p>
+          <h2 id="recorder-title">Ghi âm</h2>
+        </div>
+        <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Chưa ghi âm</span>
+      </div>
+
+      <div class="recorder-controls" aria-label="Điều khiển ghi âm">
+        <button class="control-button control-button--record" type="button" disabled aria-label="Ghi âm (chưa khả dụng)">
+          <span class="record-icon" aria-hidden="true"></span>Ghi âm
+        </button>
+        <button class="control-button" type="button" disabled aria-label="Dừng ghi âm (chưa khả dụng)">
+          <span class="stop-icon" aria-hidden="true"></span>Dừng
+        </button>
+        <button class="control-button" type="button" disabled aria-label="Phát lại bản ghi (chưa khả dụng)">
+          <span class="play-icon" aria-hidden="true"></span>Phát lại
+        </button>
+      </div>
+      <p class="recorder-note">Các điều khiển ghi âm sẽ được bổ sung ở bước sau.</p>
+    </section>
+
+    <footer class="page-footer">Drum Kit Engine <span aria-hidden="true">·</span> Giao diện bản nháp</footer>
+  </main>
+</body>
+</html>
