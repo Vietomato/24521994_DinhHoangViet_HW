@@ -9,7 +9,11 @@
   // Bấm pad bằng chuột sẽ phát âm thanh theo data-sound.
   drumButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
-      AudioEngine.play(event.currentTarget.dataset.sound);
+      const soundName = event.currentTarget.dataset.sound;
+      AudioEngine.play(soundName);
+      if (window.BeatRecorder && typeof window.BeatRecorder.record === "function") {
+        window.BeatRecorder.record(soundName);
+      }
     });
   });
 
@@ -27,9 +31,14 @@
     );
 
     if (matchingButton) {
-      AudioEngine.play(matchingButton.dataset.sound);
+      const soundName = matchingButton.dataset.sound;
+      AudioEngine.play(soundName);
       matchingButton.classList.add("is-active");
       setTimeout(() => matchingButton.classList.remove("is-active"), 120);
+
+      if (window.BeatRecorder && typeof window.BeatRecorder.record === "function") {
+        window.BeatRecorder.record(soundName);
+      }
     }
   });
 })();

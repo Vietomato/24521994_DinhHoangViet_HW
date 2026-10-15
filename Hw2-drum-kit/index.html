@@ -6,7 +6,8 @@
   <title>Drum Kit Engine</title>
   <link rel="stylesheet" href="style.css">
   <script src="audio-engine.js" defer></script>
-<script src="keyboard-controller.js" defer></script>
+  <script src="js/beat-recorder.js" defer></script>
+  <script src="keyboard-controller.js" defer></script>
 </head>
 <body>
   <main class="app-shell">
@@ -50,21 +51,21 @@
           <p class="eyebrow">SESSION</p>
           <h2 id="recorder-title">Ghi âm</h2>
         </div>
-        <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>Chưa ghi âm</span>
+        <span class="status-pill"><span class="status-dot" aria-hidden="true"></span><span id="recorder-status-text">Chưa ghi âm</span></span>
       </div>
 
       <div class="recorder-controls" aria-label="Điều khiển ghi âm">
-        <button class="control-button control-button--record" type="button" disabled aria-label="Ghi âm (chưa khả dụng)">
+        <button id="record-btn" class="control-button control-button--record" type="button" aria-label="Bắt đầu ghi âm">
           <span class="record-icon" aria-hidden="true"></span>Ghi âm
         </button>
-        <button class="control-button" type="button" disabled aria-label="Dừng ghi âm (chưa khả dụng)">
+        <button id="stop-btn" class="control-button" type="button" disabled aria-label="Dừng ghi âm hoặc dừng phát lại">
           <span class="stop-icon" aria-hidden="true"></span>Dừng
         </button>
-        <button class="control-button" type="button" disabled aria-label="Phát lại bản ghi (chưa khả dụng)">
+        <button id="play-btn" class="control-button" type="button" disabled aria-label="Phát lại bản ghi">
           <span class="play-icon" aria-hidden="true"></span>Phát lại
         </button>
       </div>
-      <p class="recorder-note">Các điều khiển ghi âm sẽ được bổ sung ở bước sau.</p>
+      <p class="recorder-note">Bấm <strong>Ghi âm</strong>, chơi trống bằng phím A, S, D hoặc chuột, sau đó bấm <strong>Dừng</strong> và <strong>Phát lại</strong>.</p>
     </section>
 
     <footer class="page-footer">Drum Kit Engine <span aria-hidden="true">·</span> Giao diện bản nháp</footer>

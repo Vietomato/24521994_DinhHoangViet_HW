@@ -95,7 +95,13 @@ kbd { display: inline-grid; width: 25px; height: 25px; place-items: center; bord
 .drum-pad--hihat:hover { border-color: #67d5c1; }
 
 .status-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid var(--border); border-radius: 999px; background: #14181e; color: #c2cad4; font-size: .78rem; white-space: nowrap; }
-.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #7b8794; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #7b8794; transition: background .2s; }
+.status-dot--recording { background: #f06a74; animation: pulse-dot 1s infinite; }
+.status-dot--playing { background: #58d68d; animation: pulse-dot 1s infinite; }
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .35; }
+}
 .recorder-controls { display: flex; flex-wrap: wrap; gap: 10px; }
 .control-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px; padding: 0 17px; border: 1px solid #3d4653; border-radius: 10px; background: var(--surface-raised); color: #d6dce5; font-weight: 600; }
 .control-button:disabled { cursor: not-allowed; opacity: .58; }
