@@ -69,15 +69,22 @@
           >
         </div>
 
+        <div class="form__group">
+          <label class="form__label" for="simulate-error">
+            <input type="checkbox" id="simulate-error">
+            Mô phỏng lỗi xử lý (dùng để kiểm tra)
+          </label>
+        </div>
+
         <button class="form__submit" type="submit">Đăng ký ngay</button>
       </form>
     </section>
 
     <!-- Status Display -->
-    <section class="status" aria-live="polite" aria-label="Trạng thái đăng ký">
-      <div class="status__box" id="status-box">
-        <p class="status__message" id="status-message">
-          Chưa có đăng ký nào.
+    <section class="status" aria-label="Trạng thái đăng ký">
+      <div class="status__box" id="status-box" data-state="idle">
+        <p class="status__message" id="status-message" role="status" aria-live="polite" aria-atomic="true">
+          Trạng thái: Idle — Chưa có đăng ký nào.
         </p>
       </div>
     </section>
@@ -89,8 +96,6 @@
     <p>&copy; 2026 Event Hub &mdash; HW3 Landing Page</p>
   </footer>
 
-  <!-- JS sẽ được thêm sau -->
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/registration-form.js"></script>
 </body>
 </html>
-

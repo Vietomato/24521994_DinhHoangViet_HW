@@ -181,6 +181,18 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
+.status__box[data-state="submitting"] {
+  border-left-color: #f59e0b;
+}
+
+.status__box[data-state="success"] {
+  border-left-color: #16a34a;
+}
+
+.status__box[data-state="error"] {
+  border-left-color: #dc2626;
+}
+
 .status__message {
   font-size: 0.95rem;
   color: #475569;
@@ -219,4 +231,3 @@ body {
     padding: 1.5rem 1rem;
   }
 }
-
