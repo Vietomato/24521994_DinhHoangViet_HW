@@ -81,7 +81,11 @@ kbd { display: inline-grid; width: 25px; height: 25px; place-items: center; bord
   transition: transform .14s ease, border-color .14s ease, background .14s ease, box-shadow .14s ease;
 }
 .drum-pad:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 10px 26px #0004; }
-.drum-pad:active { transform: translateY(1px) scale(.985); }
+.drum-pad:active,
+.drum-pad.is-active {
+  transform: translateY(1px) scale(.985);
+  border-color: var(--accent);
+}
 .drum-pad:focus-visible, .control-button:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .pad-key { display: grid; width: 58px; height: 58px; margin-bottom: 8px; place-items: center; border: 1px solid #555e6b; border-radius: 14px; background: #11151b; color: var(--accent); font-size: 1.5rem; }
 .pad-name { font-family: "Space Grotesk", sans-serif; font-size: 1.2rem; font-weight: 700; }
