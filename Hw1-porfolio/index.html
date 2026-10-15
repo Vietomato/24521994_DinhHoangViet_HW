@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; form-action 'self'; base-uri 'self';">
+  <meta name="description" content="Personal Production Portfolio of a Frontend & Software Engineer showcasing skills, projects, and contact info.">
+  <title>Developer Portfolio | Clean & Accessible</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Skip Link for Accessibility (WCAG / Keyboard Navigation) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation Landmark -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="Portfolio Home">DevPortfolio</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main id="main-content">
+    <!-- Hero / About Section -->
+    <section id="about" class="section hero-section" aria-labelledby="about-heading">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hi, my name is</p>
+          <h1 id="about-heading" class="hero-title">Alex Morgan</h1>
+          <h2 class="hero-subtitle">Software Engineer & Web Developer</h2>
+          <p class="hero-description">
+            I specialize in engineering high-performance, accessible, and robust digital experiences with clean modern web standards. Passionate about system design, performance optimization, and strict accessibility.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+        <p class="section-intro">Technologies and disciplines I actively work with:</p>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3 class="skill-category">Frontend Core</h3>
+            <ul class="skill-tags">
+              <li>Semantic HTML5</li>
+              <li>Modern CSS3 (Grid/Flex)</li>
+              <li>Vanilla JavaScript (ES6+)</li>
+              <li>Web Accessibility (a11y)</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3 class="skill-category">Software Engineering</h3>
+            <ul class="skill-tags">
+              <li>Clean Architecture</li>
+              <li>DOM API & Performance</li>
+              <li>Unit Testing & TDD</li>
+              <li>Git / CI Workflows</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3 class="skill-category">Security & Quality</h3>
+            <ul class="skill-tags">
+              <li>Content Security Policy (CSP)</li>
+              <li>WCAG 2.2 AA Standards</li>
+              <li>Lighthouse Optimization</li>
+              <li>Cross-Browser Compatibility</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+        <p class="section-intro">A selection of recent applications and prototypes:</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Web Audio Rhythm Engine</h3>
+              <p class="project-description">
+                A polyphonic drum kit and rhythm sequencer created with pure Web Audio API, featuring sub-millisecond event queuing and strict keyboard-driven interactions.
+              </p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>JavaScript</li>
+                <li>Web Audio API</li>
+                <li>CSS Grid</li>
+              </ul>
+              <div class="project-actions">
+                <a href="#projects" class="project-link" aria-label="View source code for Web Audio Rhythm Engine">Source Code</a>
+                <a href="#projects" class="project-link" aria-label="View live demo of Web Audio Rhythm Engine">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Accessible Task Engine</h3>
+              <p class="project-description">
+                An ultra-fast, local-first task organizer optimized for zero keyboard traps, full screen-reader compliance, and keyboard shortcuts.
+              </p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>HTML5</li>
+                <li>CSS Custom Properties</li>
+                <li>Local Storage API</li>
+              </ul>
+              <div class="project-actions">
+                <a href="#projects" class="project-link" aria-label="View source code for Accessible Task Engine">Source Code</a>
+                <a href="#projects" class="project-link" aria-label="View live demo of Accessible Task Engine">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Asset Optimization Pipeline</h3>
+              <p class="project-description">
+                A shell-driven asset pipeline targeting 100/100 Lighthouse performance through critical CSS inlining, image conversion, and cache budgeting.
+              </p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>Node.js</li>
+                <li>Shell</li>
+                <li>Lighthouse CI</li>
+              </ul>
+              <div class="project-actions">
+                <a href="#projects" class="project-link" aria-label="View source code for Asset Optimization Pipeline">Source Code</a>
+                <a href="#projects" class="project-link" aria-label="View live demo of Asset Optimization Pipeline">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+        <p class="section-intro">Have a project, inquiry, or question? Send a message below:</p>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="user-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="user-name" name="name" class="form-input" required autocomplete="name" placeholder="e.g. Jane Doe" aria-describedby="name-error">
+            <span id="name-error" class="error-message" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="user-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="user-email" name="email" class="form-input" required autocomplete="email" placeholder="e.g. jane@example.com" aria-describedby="email-error">
+            <span id="email-error" class="error-message" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="user-message" class="form-label">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="user-message" name="message" class="form-textarea" rows="5" required placeholder="Write your message here..." aria-describedby="message-error"></textarea>
+            <span id="message-error" class="error-message" aria-live="polite"></span>
+          </div>
+
+          <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Landmark -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p class="footer-copy">&copy; <span id="current-year">2026</span> Alex Morgan. All rights reserved.</p>
+      <ul class="footer-links" aria-label="Social and repository links">
+        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+
